@@ -1,0 +1,40 @@
+import pandas as pd
+import numpy as np
+from pandas import DataFrame
+
+#read csv file into a pandas DataFrame named seperately
+X = pd.read_csv(r'/Users/fanyuan/EP2300_jupyter notebook/data/X.csv')
+Y = pd.read_csv(r'/Users/fanyuan/EP2300_jupyter notebook/data/Y.csv')
+
+#set the outcome result give no more than two digits after decimal point.
+pd.set_option("display.precision", 2)
+print("Mean value of Device statistics:")
+print(X.mean())
+print ("-----------------------------------------------------")
+print(Y.mean())
+print ("--------------------------------------------------------------------------------------")
+print ("Maximum value of Device statistics:")
+print(X.max())
+print ("-----------------------------------------------------")
+print(Y.max())
+print ("--------------------------------------------------------------------------------------")
+print ("Minimum value of Device statistics:")
+print(X.min())
+print ("-----------------------------------------------------")
+print(Y.min())
+print ("--------------------------------------------------------------------------------------")
+print ("25th percentile value of Device statistics:")
+print(X.quantile(0.25))
+print ("-----------------------------------------------------")
+print(Y.quantile(0.25))
+print ("--------------------------------------------------------------------------------------")
+print ("90th percentile value of Device statistics:")
+print(X.quantile(0.9))
+print ("-----------------------------------------------------")
+print(Y.quantile(0.9))
+print ("--------------------------------------------------------------------------------------")
+print ("Standard deviation value of Device statistics:")
+print(X.std())
+print ("-----------------------------------------------------")
+print(Y.std())
+print ("--------------------------------------------------------------------------------------")
